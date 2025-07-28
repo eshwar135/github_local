@@ -1,0 +1,25 @@
+[2025-07-28T08:26:33.808781] 
+🤖 Unit Agent Ready! Type a conversion question or 'exit' to quit.
+[2025-07-28T08:27:02.487254] 
+🔍 [Unit Agent] Classifying tool for input: 6inches
+[2025-07-28T08:27:03.319065] 🧠 [Unit Agent] Selected tool: length_converter
+[2025-07-28T08:27:03.319888] 
+🔄 [Router] Routing to: length_converter
+[2025-07-28T08:27:03.320489] 
+🔧 [length_converter] Input: 6inches
+[2025-07-28T08:27:03.321378] 
+🧠 [Final Output]
+[2025-07-28T08:27:03.321478] 🔧 Selected Tool: length_converter
+[2025-07-28T08:27:03.321564] ✅ Result: Unit Error: Couldn't parse input
+[2025-07-28T08:28:14.678708] 
+🔍 [Unit Agent] Classifying tool for input: 1 inch to cm
+[2025-07-28T08:28:15.906099] 🧠 [Unit Agent] Selected tool: length_converter
+[2025-07-28T08:28:15.908352] 
+🔄 [Router] Routing to: length_converter
+[2025-07-28T08:28:15.909232] 
+🔧 [length_converter] Input: 1 inch to cm
+[2025-07-28T08:28:15.909716] ✅ [length_converter] Result: 1.0 inch = 2.54 cm
+[2025-07-28T08:28:15.910654] 
+🧠 [Final Output]
+[2025-07-28T08:28:15.910930] 🔧 Selected Tool: length_converter
+[2025-07-28T08:28:15.911197] ✅ Result: 1.0 inch = 2.54 cm
