@@ -1,0 +1,41 @@
+[2025-08-04T19:22:09.647270] 📚 [RAG] Loaded 2 chunks from ai.txt.txt
+[2025-08-04T19:22:09.687456] 📚 [RAG] Loaded 2 chunks from health.txt.txt
+[2025-08-04T19:22:48.009442] 📚 [RAG] Loaded 2 chunks from ai.txt
+[2025-08-04T19:22:48.040493] 📚 [RAG] Loaded 2 chunks from health.txt
+[2025-08-04T19:23:28.004667] 
+🔍 Classifying: What is artificial intelligence?
+[2025-08-04T19:23:29.020399] 🧠 Selected Tool: rag_tool
+[2025-08-04T19:23:29.021944] 
+🔍 [rag_tool] Input: What is artificial intelligence?
+[2025-08-04T19:23:33.006091] 
+✅ Final Result
+[2025-08-04T19:23:33.006729] Tool: rag_tool
+[2025-08-04T19:23:33.007646] Answer: Artificial intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems.  These processes include learning (acquiring information), reasoning (applying rules), and self-correction.
+[2025-08-04T19:23:33.021547] 
+🔍 Classifying: Tips for staying healthy?
+[2025-08-04T19:23:33.615451] 🧠 Selected Tool: rag_tool
+[2025-08-04T19:23:33.616907] 
+🔍 [rag_tool] Input: Tips for staying healthy?
+[2025-08-04T19:23:35.903664] 
+✅ Final Result
+[2025-08-04T19:23:35.904289] Tool: rag_tool
+[2025-08-04T19:23:35.905242] Answer: Based on the provided text, tips for staying healthy include:
+
+* **Regular physical activity:**  Engage in exercise regularly.
+* **Balanced nutrition:** Maintain a healthy diet.
+* **Adequate rest:** Get enough sleep.
+* **Mental stability:**  Prioritize mental well-being.
+* **Vaccinations:**  Get vaccinated.
+* **Regular screenings:**  Undergo regular health check-ups.
+* **Healthy lifestyle choices:** Make choices that support overall health.  This likely encompasses the points above.  
+* **Diet and exercise:**  Crucial for managing or preventing chronic diseases like diabetes, heart disease, and hypertension.
+* **Regular medical check-ups:**  Essential for monitoring health and early disease detection.
+[2025-08-04T19:23:35.908660] 
+🔍 Classifying: What is 25% of 320?
+[2025-08-04T19:23:37.813090] 🧠 Selected Tool: fallback_tool
+[2025-08-04T19:23:37.814682] 
+🔧 [fallback_tool] Input: What is 25% of 320?
+[2025-08-04T19:23:38.719698] 
+✅ Final Result
+[2025-08-04T19:23:38.720011] Tool: fallback_tool
+[2025-08-04T19:23:38.720480] Answer: 25% of 320 is (25/100) * 320 = 0.25 * 320 = $\boxed{80}$
