@@ -1,0 +1,13 @@
+{
+  "name": "mcp-todo-manager",
+  "version": "0.1.0",
+  "description": "In-memory todo manager with add/list/remove tools",
+  "command": {
+    "path": "python",
+    "args": ["server.py"],
+    "env": {
+      "PYTHONUNBUFFERED": "1",
+      "MCP_VERBOSE": "1"
+    }
+  }
+}
