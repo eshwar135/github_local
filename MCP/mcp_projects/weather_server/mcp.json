@@ -1,0 +1,15 @@
+mcp_json = {
+    "name": "mcp-weather-server",
+    "description": "MCP Weather Plugin with get_weather tool and weather:// resource",
+    "hosts": {
+        "python": {
+            "command": [
+                sys.executable,
+                "mcp_weather_server.py"
+            ]
+        }
+    }
+}
+mcp_path = project_dir / "mcp.json"
+mcp_path.write_text(json.dumps(mcp_json, indent=2), encoding="utf-8")
+print("Wrote:", mcp_path)

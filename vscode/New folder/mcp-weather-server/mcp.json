@@ -1,0 +1,12 @@
+﻿{
+  "name": "mcp-weather-server",
+  "description": "MCP Weather Plugin with get_weather tool and weather:// resource",
+  "hosts": {
+    "python": {
+      "command": [
+        "python",
+        "mcp_weather_server.py"
+      ]
+    }
+  }
+}

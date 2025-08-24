@@ -1,0 +1,15 @@
+﻿{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run MCP Weather Server",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/mcp_weather_server.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONUNBUFFERED": "1" }
+    }
+  ]
+}
