@@ -1,0 +1,13 @@
+FROM python:3.10-slim
+WORKDIR /app
+
+# Install JupyterLab
+RUN pip install --no-cache-dir jupyterlab
+
+# Copy local files into the container
+COPY . .
+
+EXPOSE 8888
+
+# Default startup (we will override with our own token at runtime)
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
