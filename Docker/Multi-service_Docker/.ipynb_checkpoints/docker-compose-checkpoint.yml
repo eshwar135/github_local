@@ -1,0 +1,50 @@
+version: "3.8"
+
+services:
+  web:
+    build: ./web
+    container_name: multi_web
+    ports:
+      - "8000:8000"                 # FastAPI app accessible on host:8000
+    env_file:
+      - ./env/.env                  # contains GEMINI_API_KEY and DB connection vars
+    depends_on:
+      - db
+    volumes:
+      - ./web:/app                  # live-edit the app code on host and container
+    networks:
+      - appnet
+
+  db:
+    image: postgres:15
+    container_name: multi_db
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-appdb}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - appnet
+
+  jupyter:
+    image: jupyter/base-notebook:python-3.10
+    container_name: multi_jupyter
+    user: root
+    ports:
+      - "8888:8888"                 # open Jupyter on host:8888
+    env_file:
+      - ./env/.env                  # also give the GEMINI_API_KEY to notebook
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./env:/home/jovyan/.env:ro  # optional: have .env inside the notebook workspace (read-only)
+    command: start-notebook.sh --NotebookApp.token=''
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge
+
+volumes:
+  db_data:

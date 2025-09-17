@@ -1,0 +1,14 @@
+Set-Location -Path "D:\agenic_arhitecture\Multi-service_Docker"
+
+# overwrite requirements.txt (removes google-generative-ai line)
+Set-Content -Path .\web\requirements.txt -Value @"
+fastapi==0.101.0
+uvicorn[standard]==0.22.0
+python-dotenv==1.0.0
+httpx==0.25.0
+psycopg2-binary==2.9.7
+requests==2.31.0
+"@ -Encoding UTF8
+
+# show new contents for verification
+Get-Content .\web\requirements.txt

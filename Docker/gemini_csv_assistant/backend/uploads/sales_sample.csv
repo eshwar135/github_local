@@ -1,0 +1,6 @@
+﻿product,region,price,units,order_date
+A,North,100,5,2024-01-15
+B,South,200,3,2024-02-20
+C,West,150,7,2024-03-05
+D,East,50,20,2024-04-10
+E,North,120,2,2024-05-12
