@@ -1,0 +1,7 @@
+flask
+python-dotenv
+google-genai
+google-generativeai
+requests
+pytest
+pytest-mock

@@ -1,0 +1,8 @@
+jupyterlab
+python-dotenv
+pandas
+notebook
+ipykernel
+requests
+google-genai
+flask

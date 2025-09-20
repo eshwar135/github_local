@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: jupyter.Dockerfile
+    image: deepcode-jupyter:latest
+    container_name: deepcode_jupyter
+    ports:
+      - '8888:8888'
+    volumes:
+      - .:/workspace
+      - D:/agenic_arhitecture/5:/workspace
+      - D:/gemini:/host/secrets:ro
+    env_file:
+      - D:/gemini/.env
+    environment:
+      - PYTHONUNBUFFERED=1
+      - GEMINI_API_KEY_FILE=/host/secrets/gemini_key
+    depends_on:
+      - flask
+    restart: unless-stopped
+
+  flask:
+    build: ./flask_app
+    image: deepcode-gemini-helper:latest
+    container_name: deepcode_gemini
+    ports:
+      - '5000:5000'
+    volumes:
+      - D:/gemini:/host/secrets:ro
+      - D:/agenic_arhitecture/5/flask_app:/app
+    env_file:
+      - D:/gemini/.env
+    environment:
+      - FLASK_ENV=development
+      - GEMINI_API_KEY_FILE=/host/secrets/gemini_key
+    restart: unless-stopped
